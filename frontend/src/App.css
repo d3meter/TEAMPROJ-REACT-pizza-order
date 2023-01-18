@@ -1,0 +1,56 @@
+/* --- start of CSS reset --- */
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  box-sizing: border-box;
+  background: transparent;
+  font-family: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+a img {
+  border: none;
+}
+
+button,
+a {
+  cursor: pointer;
+  color: inherit;
+}
+
+textarea {
+  resize: none;
+}
+
+button,
+textarea,
+select {
+  appearance: none !important;
+  border-radius: 0;
+}
+
+/* --- end of CSS reset --- */
+
+body {
+  min-width: 1400px;
+  overflow: scroll;
+  padding: 40px;
+  background: #d2454b;
+}
+
+.App {
+  width: 100%;
+  min-width: 1600px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: inherit
+}

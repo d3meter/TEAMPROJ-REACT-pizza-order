@@ -1,0 +1,13 @@
+{
+    "orders": [
+        { "name": "Primavera", "price": 19, "piece": 1 },
+        { "name": "Capricciosa", "price": 22, "piece": 3 },
+        { "name": "Salami", "price": 21, "piece": 2 }
+    ],
+    "name": "Minta Mókus",
+    "phone": "06121212222",
+    "zip": "9999",
+    "city": "Racoon city",
+    "street": "Elm utca",
+    "house": "12"
+}

@@ -1,0 +1,105 @@
+.Pizza {
+    width: 310px;
+    height: 480px;
+    background-color: #d9d9d9;
+    font-family: "Kalam", cursive;
+    color: #463926;
+    font-size: 16px;
+    line-height: 1.2;
+    padding-inline: 20px;
+    padding-block: 10px;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 5px;
+    filter: drop-shadow(8px 8px 5px rgba(0, 0, 0, 0.1));
+}
+
+.Pizza:hover {
+    background-color: #eeeded;
+    transition: 0.1s ease-in;
+}
+
+.Pizza h3 {
+    padding-block: 10px;
+    font-size: 18px;
+    display: block;
+    font-size: 1.17em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.Pizza h5 {
+    font-size: 22px;
+}
+
+.Pizza hr {
+    border: #463926 solid 1px;
+    margin-block: 8px;
+}
+
+.pizza-pics {
+    height: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.Pizza label {
+    font-size: 20px;
+}
+
+.Pizza input {
+    width: 66px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    background-color: white;
+    font-size: 25px;
+    font-weight: 500;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+.ordering {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+}
+
+.order-amount {
+  position: relative;
+  top: -50%;
+  width: fit-content;
+  height: fit-content;
+}
+
+.add-order {
+    height: 40px;
+    width: 80px;
+    background: white no-repeat center center;
+    background-size: auto;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.add-order:hover {
+    background-color: rgba(86, 86, 86, 0.2);
+    transition: 0.1s ease-in;
+}
+
+.basketBtn {
+    height: 38px;
+    scale: 0.8;
+}
+
+.pizzaPics {
+    width: 100%;
+    line-height: 0.8;
+    display: block;
+}
