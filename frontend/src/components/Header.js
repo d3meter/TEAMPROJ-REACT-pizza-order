@@ -1,12 +1,16 @@
-import headerImg from './../img_pub/italy.png';
-import './Header.css';
-import headerLogo from './../img_pub/team_logo.png'
+import headerImg from "./../img_pub/italy.png";
+import "./Header.css";
+import headerLogo from "./../img_pub/team_logo.png";
 
 function Header() {
-  return(
+  return (
     <div className="Header">
-      <img src={headerImg} className="header-img" alt="header_imgo" />
-      <img src={headerLogo} className="header-logo" alt="header_logo" />
+      <div className="header-img">
+        <img src={headerImg} className="header-img-img" alt="header_img" />
+      </div>
+      <div className="header-logo">
+        <img src={headerLogo} className="header-logo-img" alt="header_logo" />
+      </div>
     </div>
   );
 }

@@ -1,20 +1,34 @@
 .Header {
     width: 100%;
-    height: 340px;
-    max-width: 1520px;
+    height: fit-content;
     display: flex;
-    gap: 200px;
+    position: relative;
+    box-sizing: border-box;
 }
 
 .header-img {
-    height: 100%;
-    display: block;
     padding-left: 40px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    z-index: 1;
+}
+
+.header-img-img {
+    width: 60%;
+    padding-right: 60px;
 }
 
 .header-logo {
-    width: 385px;
-    height: 400px;
-    margin-top: 30px;
+    width: 30%;
+    height: 30%;
+    position: absolute;
+    right: 30px;
+    z-index: 2;
     filter: drop-shadow(10px 10px 2px rgba(0, 0, 0, 0.765));;
+}
+
+.header-logo-img {
+    width: 100%;
 }
