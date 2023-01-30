@@ -1,5 +1,5 @@
 # TEAMPROJ-REACT-pizza-order
-The same pizza ordering website with own backend (without admin and order list) but in REACT. The orders are stored in JSON files (backend/data/orders). Each order gets an own generated id.
+The same project as "TEAMPROJ-JS-pizza-order-admin" but coded in REACT this time. (Only main page without admin and order pages.)
 
 Start backend:
 cd backend - npm start
