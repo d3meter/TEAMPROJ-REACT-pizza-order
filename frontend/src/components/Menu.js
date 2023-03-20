@@ -29,8 +29,18 @@ function Menu() {
   };
 
   const onPizzaChange = (name, price, piece) => {
-    setOrders([...orders, { name, price, piece }]);
+    if (orders.filter((e) => e.name === name).length > 0) {
+      for (let i = 0; i < orders.length; i++) {
+       if (orders[i].name === name) {
+        orders[i].piece += piece
+        setOrders([...orders])
+       }
+      }
+    } else {
+      setOrders([...orders, { name, price, piece }]);
+    }
   };
+  console.log(orders);
 
   const handleRemoveDiv = () => {
     var arrayCopy = [...orders];

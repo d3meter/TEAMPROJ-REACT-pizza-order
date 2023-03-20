@@ -15,6 +15,7 @@ function Pizza({ id, name, ingredients, price, onChange }) {
 
     const handlePickData = () => {
         onChange(name, price, piece);
+        setPiece(1)
     };
 
     return (
