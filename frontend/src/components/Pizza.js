@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Pizza.css";
 import basketImg from "./../img_pub/basket.png";
 
-function Pizza({ name, ingredients, price, onChange }) {
+function Pizza({ name, ingredients, price, onPizzaChange }) {
   const [piece, setPiece] = useState(1);
 
   const min = 1;
@@ -14,7 +14,8 @@ function Pizza({ name, ingredients, price, onChange }) {
   };
 
   const handlePickData = () => {
-    onChange(name, price, piece);
+    onPizzaChange(name, price, piece);
+    setPiece(1)
   };
 
   return (

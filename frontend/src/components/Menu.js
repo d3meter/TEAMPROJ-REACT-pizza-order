@@ -4,7 +4,7 @@ import Input from "./Input";
 import Order from "./Order";
 import "./Menu.css";
 import DelBtn from "./../img_pub/delete.png";
-import pizzas from "../data/pizza.json"
+import pizzas from "../data/pizza.json";
 
 function Menu() {
   const [orders, setOrders] = useState([]);
@@ -28,9 +28,33 @@ function Menu() {
     if (totalPrice) setIsVisible(true);
   };
 
+/*   const onPizzaChange = (name, price, piece) => {
+    if (orders.length !== 0) {
+      for  (let i = 0; i < orders.length; i++) {
+        if (orders[i].name === name) {
+          orders[i].piece += piece;
+        } else {
+          setOrders([...orders, { name, price, piece }]);
+        }
+      }
+    } else {
+      setOrders([...orders, { name, price, piece }]);
+    }
+  }; */
+  
   const onPizzaChange = (name, price, piece) => {
-    setOrders([...orders, { name, price, piece }]);
+    if (orders.filter((e) => e.name === name).length > 0) {
+      for (let i = 0; i < orders.length; i++) {
+       if (orders[i].name === name) {
+        orders[i].piece += piece
+        setOrders([...orders])
+       }
+      }
+    } else {
+      setOrders([...orders, { name, price, piece }]);
+    }
   };
+  console.log(orders);
 
   const handleRemoveDiv = () => {
     var arrayCopy = [...orders];
@@ -53,7 +77,7 @@ function Menu() {
               id={pizza.id}
               ingredients={pizza.ingredients}
               price={pizza.price}
-              onChange={onPizzaChange}
+              onPizzaChange={onPizzaChange}
             />
           ))}
         </div>
