@@ -27,20 +27,6 @@ function Menu() {
   const handleVisible = () => {
     if (totalPrice) setIsVisible(true);
   };
-
-/*   const onPizzaChange = (name, price, piece) => {
-    if (orders.length !== 0) {
-      for  (let i = 0; i < orders.length; i++) {
-        if (orders[i].name === name) {
-          orders[i].piece += piece;
-        } else {
-          setOrders([...orders, { name, price, piece }]);
-        }
-      }
-    } else {
-      setOrders([...orders, { name, price, piece }]);
-    }
-  }; */
   
   const onPizzaChange = (name, price, piece) => {
     if (orders.filter((e) => e.name === name).length > 0) {
