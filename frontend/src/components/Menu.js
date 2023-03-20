@@ -4,9 +4,9 @@ import Input from "./Input";
 import Order from "./Order";
 import "./Menu.css";
 import DelBtn from "./../img_pub/delete.png";
+import pizzas from "../data/pizza.json"
 
 function Menu() {
-  const [pizzas, setPizzas] = useState([]);
   const [orders, setOrders] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
@@ -38,16 +38,6 @@ function Menu() {
     setOrders(arrayCopy);
   };
 
-  useEffect(() => {
-    fetch(`http://127.0.0.1:3000/pizzas`)
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        setPizzas(data);
-      });
-  }, []);
-
   return (
     <div className="Menu">
       <div className="c-title">
@@ -56,9 +46,9 @@ function Menu() {
       </div>
       <div className="c-container">
         <div className="c-menu">
-          {pizzas.map((pizza) => (
+          {pizzas.map((pizza, i) => (
             <Pizza
-              key={pizza.id}
+              key={i}
               name={pizza.name}
               id={pizza.id}
               ingredients={pizza.ingredients}
